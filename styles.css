@@ -1,28 +1,128 @@
-body {
-  font-family: arial, helvertica, sans-serif;
-  font-size: .8em;
+/* ----- CSS RESET ----- */
+html, body, center, p, a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+.center { text-align: center;}
+
+#main {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-fieldset {
-  padding: 20px;
-  clear: both;
+#first {
+  display: inline-block;
+  width: 40%;
+  max-width: 360px;
+  margin: 10px 0;
+}
+#second {
+  display: inline-block;
+  width: 40%;
+  max-width: 360px;
+  margin: 10px 0;
+}
+.reset {
+  display: inline-block;
+  max-width: 80px;
+  width: 10%;
 }
 
-legend {
+/* ----- TYPOGRAPHY ----- */
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Source Sans Pro Light'),
+		 local('SourceSansPro-Light'),
+		 url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff) format('woff');
+}
+
+html{
+	padding: 10px 0;
+	background-color: #ff5b24;
+
+	font-family: 'Source Sans Pro', 'sans-serif';
+	font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
+	line-height: 1.6;
+	color: #f5f5f5;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
+/* ----- INPUTS ----- */
 label {
-  width: 80px;
-  float: left;
-  clear: left;
+	display: inline-block;
+	text-align: center;
+	margin-top: 10px;
+}
+#reset {
+  display: inline-block;
+	vertical-align: middle;
+  background-color:rgba(0,0,0,.3);
+  color: #fff;
+	height: 30px;
+	margin: 0 20px;
+  padding: 5px;
+	border: 2px solid #f5f5f5;
+	border-radius: 4px;
+}
+#reset:hover { 
+  cursor:pointer;
+  background-color: #f5f5f5;
+  color: #343434;
 }
 
-input {
-  float: left;
+#first input[type=text]{
+	display: block;
+	vertical-align: middle;
+
+	width: 100px;
+	height: 40px;
+	margin: 0 auto;
+	border: 1px solid #f5f5f5;
+	border-radius: 4px;
+
+	background-color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: inherit;
+  font-weight: inherit;
+	text-align: center;
+	color: #343434;
 }
 
-input[type="submit"] {
-  margin: 2em 0;
+#btw {
+background-color:#ccc;
+}
+
+#second input[type=text]{
+	display: block;
+	vertical-align: middle;
+
+	width: 100px;
+	height: 40px;
+	margin: 0 auto;
+	border: 1px solid #f5f5f5;
+	border-radius: 4px;
+
+	background-color: transparent;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: inherit;
+  font-weight: inherit;
+	text-align: center;
+	color: inherit;
+}
+
+#first input[type=text]:focus{
+	outline: none;
+	box-shadow: inset 2px 2px 2px 0 rgba(0,0,0,.1);
+}
+.perc:hover {
+  cursor: pointer;
 }

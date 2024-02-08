@@ -1,27 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VAT calculator</title>
-  <link rel="stylesheet" href="styles.css"> 
-  <script src="script.js"></script>
-</head>
-<body>
-  <form id=" vatCalculator">
-    <fieldset>
-      <legend title="ammount">VAT Calculator</legend>
-      <label for="amount">Amount</label>
-      <input type="text" id="amount" name="amount" placeholder="$0.00 (before VAT)" value="" />
-      <label for="amount">VAT %</label>
-      <input type="text" id="vat" name="vat" placeholder="%0" value="" />
-    </fieldset>
-    <input type="submit" value="Calculate VAT" />
-    <fieldset>
-      <legend>Result</legend>
-      <!-- The result needs to be output into the value below -->
-      <input type="text" id="result" name="result" placeholder="£0.00" value="" />
-    </fieldset>
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VAT calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1 class="center">Moms Kalkulator</h1>
+    <div id="main">
+      <div id="first">
+        <h2 class="center">Velg moms %</h2>
+        <label for="excl">
+          Uten Moms
+          <input
+            type="text"
+            id="excl"
+            value="0"
+            onfocus="resetValue()"
+            onkeyup="calcIncl()"
+          />
+        </label>
+        <label for="btw">
+          Moms
+          <input type="text" id="btw" value="0" disabled />
+        </label>
+        <label for="incl">
+          Inkl Moms
+          <input
+            type="text"
+            id="incl"
+            value="0"
+            onfocus="resetValue()"
+            onkeyup="calcExcl()"
+          />
+        </label>
+      </div>
+      <div class="reset">
+        <button id="reset" value="reset" onclick="resetValue()">Reset</button>
+      </div>
+      <div id="second">
+        <h2 class="center">Regn ut</h2>
+        <label for="perc"
+          >25%
+          <input
+            type="text"
+            class="perc"
+            id="perc25"
+            value="25"
+            onclick="percChange(25)"
+          />
+        </label>
+        <label for="perc"
+          >12%
+          <input
+            type="text"
+            class="perc"
+            id="perc12"
+            value="12"
+            onclick="percChange(12)"
+          />
+        </label>
+        <label for="perc"
+          >6%
+          <input
+            type="text"
+            class="perc"
+            id="perc6"
+            value="6"
+            onclick="percChange(6)"
+          />
+        </label>
+      </div>
+    </div>
+  </body>
 </html>
