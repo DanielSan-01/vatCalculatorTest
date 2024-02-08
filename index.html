@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAT calculator</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="script.js"></script>
+</head>
+<body>
+  <form id=" vatCalculator">
+    <fieldset>
+      <legend title="ammount">VAT Calculator</legend>
+      <label for="amount">Amount</label>
+      <input type="text" id="amount" name="amount" placeholder="$0.00 (before VAT)" value="" />
+      <label for="amount">VAT %</label>
+      <input type="text" id="vat" name="vat" placeholder="%0" value="" />
+    </fieldset>
+    <input type="submit" value="Calculate VAT" />
+    <fieldset>
+      <legend>Result</legend>
+      <!-- The result needs to be output into the value below -->
+      <input type="text" id="result" name="result" placeholder="£0.00" value="" />
+    </fieldset>
+  </form>
+</body>
+</html>

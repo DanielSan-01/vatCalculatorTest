@@ -1,0 +1,28 @@
+body {
+  font-family: arial, helvertica, sans-serif;
+  font-size: .8em;
+}
+
+fieldset {
+  padding: 20px;
+  clear: both;
+}
+
+legend {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+label {
+  width: 80px;
+  float: left;
+  clear: left;
+}
+
+input {
+  float: left;
+}
+
+input[type="submit"] {
+  margin: 2em 0;
+}
